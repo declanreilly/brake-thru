@@ -1,4 +1,53 @@
 /*global jQuery */
+function submitToAPI(e) {
+    e.preventDefault();
+  
+    var Namere = /[A-Za-z]{1}[A-Za-z]/;
+    if (!Namere.test($("#name-input").val())) {
+      alert("Name must contain two or more characters");
+      return;
+    }
+    // var mobilere = /[0-9]{10}/;
+    var mobilere = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/;
+    if (!mobilere.test($("#phone-input").val())) {
+      alert("Please enter a vaild phone number");
+      return;
+    }
+  
+    var name = $("#name-input").val();
+    var phone = $("#phone-input").val();
+    var msg = $("#description-input").val();
+    var data = {
+      name: name,
+      phone: phone,
+      msg: msg
+    };
+  
+    $.ajax({
+      type: "POST",
+      url: "https://r0s6b787aa.execute-api.eu-west-1.amazonaws.com/production/contact-us",
+      dataType: "json",
+      crossDomain: "true",
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(data),
+  
+  
+      success: function () {
+        // clear form and show a success message
+        alert("Successfull");
+        document.getElementById("contact-form").reset();
+        location.reload();
+      },
+      error: function () {
+        // TODO Cross origin not working
+        // show an error message 
+        alert("Message Sent");
+        document.getElementById("contact-form").reset();
+        location.reload();
+      }
+    });
+  }
+
 (function ($) {
     "use strict";
 
@@ -250,51 +299,3 @@
 
 }(jQuery));
 
-function submitToAPI(e) {
-    e.preventDefault();
-  
-    var Namere = /[A-Za-z]{1}[A-Za-z]/;
-    if (!Namere.test($("#name-input").val())) {
-      alert("Name must contain two or more characters");
-      return;
-    }
-    // var mobilere = /[0-9]{10}/;
-    var mobilere = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/;
-    if (!mobilere.test($("#phone-input").val())) {
-      alert("Please enter a vaild phone number");
-      return;
-    }
-  
-    var name = $("#name-input").val();
-    var phone = $("#phone-input").val();
-    var msg = $("#description-input").val();
-    var data = {
-      name: name,
-      phone: phone,
-      msg: msg
-    };
-  
-    $.ajax({
-      type: "POST",
-      url: "https://8w22isfyil.execute-api.eu-west-1.amazonaws.com/production",
-      dataType: "json",
-      crossDomain: "true",
-      contentType: "application/json; charset=utf-8",
-      data: JSON.stringify(data),
-  
-  
-      success: function () {
-        // clear form and show a success message
-        alert("Successfull");
-        document.getElementById("contact-form").reset();
-        location.reload();
-      },
-      error: function () {
-        // TODO Cross origin not working
-        // show an error message 
-        alert("Message Sent");
-        document.getElementById("contact-form").reset();
-        location.reload();
-      }
-    });
-  }
