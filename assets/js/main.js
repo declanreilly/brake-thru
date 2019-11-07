@@ -75,23 +75,23 @@ function submitToAPI(e) {
         --------------------------------- */
 
         // Home Page 0ne Date Picker JS
-        var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        $('#startDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: today,
-            maxDate: function () {
-                return $('#endDate').val();
-            }
-        });
+        // var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        // $('#startDate').datepicker({
+        //     uiLibrary: 'bootstrap4',
+        //     iconsLibrary: 'fontawesome',
+        //     minDate: today,
+        //     maxDate: function () {
+        //         return $('#endDate').val();
+        //     }
+        // });
 
-        $('#endDate').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: function () {
-                return $('#startDate').val();
-            }
-        });
+        // $('#endDate').datepicker({
+        //     uiLibrary: 'bootstrap4',
+        //     iconsLibrary: 'fontawesome',
+        //     minDate: function () {
+        //         return $('#startDate').val();
+        //     }
+        // });
 
         // Partner Carousel
         $(".partner-content-wrap").owlCarousel({
@@ -117,48 +117,48 @@ function submitToAPI(e) {
 
 
         // Funfact Count JS
-        $('.counter').counterUp({
-            delay: 10,
-            time: 1000
-        });
+        // $('.counter').counterUp({
+        //     delay: 10,
+        //     time: 1000
+        // });
 
 
         // Choose Popular Car Isotope
-        $(".popucar-menu a, .home2-car-filter a").click(function () {
+        // $(".popucar-menu a, .home2-car-filter a").click(function () {
 
-            $(".popucar-menu a, .home2-car-filter a").removeClass('active');
-            $(this).addClass('active');
+        //     $(".popucar-menu a, .home2-car-filter a").removeClass('active');
+        //     $(this).addClass('active');
 
-            var filterValue = $(this).attr('data-filter');
-            $(".popular-car-gird").isotope({
-                filter: filterValue
-            });
+        //     var filterValue = $(this).attr('data-filter');
+        //     $(".popular-car-gird").isotope({
+        //         filter: filterValue
+        //     });
 
-            return false;
-        }); // Choose Popular Car Isotope End
-
-
-        // Choose Newest Car Isotope
-        $(".newcar-menu a").click(function () {
-
-            $(".newcar-menu a").removeClass('active');
-            $(this).addClass('active');
-
-            var filterValue = $(this).attr('data-filter');
-            $(".newest-car-gird").isotope({
-                filter: filterValue
-            });
-
-            return false;
-        }); // Choose Newest Car Isotope End
+        //     return false;
+        // }); // Choose Popular Car Isotope End
 
 
-        // Choose Car Maginific Popup
-        $('.car-hover').magnificPopup({
-            type: 'image',
-            removalDelay: 300,
-            mainClass: 'mfp-fade'
-        }); // Maginific Popup End
+        // // Choose Newest Car Isotope
+        // $(".newcar-menu a").click(function () {
+
+        //     $(".newcar-menu a").removeClass('active');
+        //     $(this).addClass('active');
+
+        //     var filterValue = $(this).attr('data-filter');
+        //     $(".newest-car-gird").isotope({
+        //         filter: filterValue
+        //     });
+
+        //     return false;
+        // }); // Choose Newest Car Isotope End
+
+
+        // // Choose Car Maginific Popup
+        // $('.car-hover').magnificPopup({
+        //     type: 'image',
+        //     removalDelay: 300,
+        //     mainClass: 'mfp-fade'
+        // }); // Maginific Popup End
 
 
         // Testimonial Carousel
@@ -191,102 +191,6 @@ function submitToAPI(e) {
             closeOnClick: true
         });// SlickNav End
 
-
-        // Home Page Two Slideshow
-        $("#slideslow-bg").vegas({
-            overlay: true,
-            transition: 'fade',
-            transitionDuration: 2000,
-            delay: 4000,
-            color: '#000',
-            animation: 'random',
-            animationDuration: 20000,
-            slides: [
-                {
-                    src: 'assets/img/slider-img/slider-img-1.jpg'
-                },
-                {
-                    src: 'assets/img/slider-img/slider-img-2.jpg'
-                },
-                {
-                    src: 'assets/img/slider-img/slider-img-3.jpg'
-                },
-                {
-                    src: 'assets/img/slider-img/slider-img-4.jpg'
-                }
-            ]
-        }); //Home Page Two Slideshow
-
-        // Home Page Two Date Picker JS
-
-        $('#startDate2').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: today,
-            maxDate: function () {
-                return $('#endDate2').val();
-            }
-        });
-
-        $('#endDate2').datepicker({
-            uiLibrary: 'bootstrap4',
-            iconsLibrary: 'fontawesome',
-            minDate: function () {
-                return $('#startDate2').val();
-            }
-        });
-
-        // Home Page 3 Slider Start
-        $("#home-slider-area").owlCarousel({
-            loop: true,
-            items: 1,
-            autoplay: true,
-            autoplayHoverPause: false,
-            autoplayTimeout: 3000,
-            nav: false,
-            dots: true,
-            animateOut: 'slideOutDown',
-            animateIn: 'slideInDown'
-        });
-        // Home Page 3 Slider End
-
-        // Car Details Slider Start
-        $(".car-preview-crousel").owlCarousel({
-            loop: true,
-            items: 1,
-            autoplay: true,
-            autoplayHoverPause: true,
-            autoplayTimeout: 2000,
-            nav: false,
-            dots: true,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn'
-        });
-
-        // Home 2 Service Carousel
-        $(".service-container-wrap").owlCarousel({
-            loop: true,
-            items: 3,
-            margin: 20,
-            autoplay: true,
-            autoplayHoverPause: true,
-            autoplayTimeout: 2000,
-            nav: false,
-            dots: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 2
-                },
-                1000: {
-                    items: 3
-                }
-            }
-        });
-
-
     }); //Ready Function End
 
     jQuery(window).load(function () {
@@ -295,7 +199,6 @@ function submitToAPI(e) {
         jQuery('body').removeClass('loader-active');
         jQuery(".popular-car-gird").isotope();
     }); //window load End
-
 
 }(jQuery));
 
