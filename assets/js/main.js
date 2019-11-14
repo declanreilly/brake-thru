@@ -4,13 +4,13 @@ function submitToAPI(e) {
   
     var Namere = /[A-Za-z]{1}[A-Za-z]/;
     if (!Namere.test($("#name-input").val())) {
-      alert("Name must contain two or more characters");
+      alert("Name must contain two or more characters.");
       return;
     }
     // var mobilere = /[0-9]{10}/;
     var mobilere = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/;
     if (!mobilere.test($("#phone-input").val())) {
-      alert("Please enter a vaild phone number");
+      alert("Please enter a vaild phone number.");
       return;
     }
   
@@ -74,25 +74,6 @@ function submitToAPI(e) {
          All Window Scroll Function End
         --------------------------------- */
 
-        // Home Page 0ne Date Picker JS
-        // var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        // $('#startDate').datepicker({
-        //     uiLibrary: 'bootstrap4',
-        //     iconsLibrary: 'fontawesome',
-        //     minDate: today,
-        //     maxDate: function () {
-        //         return $('#endDate').val();
-        //     }
-        // });
-
-        // $('#endDate').datepicker({
-        //     uiLibrary: 'bootstrap4',
-        //     iconsLibrary: 'fontawesome',
-        //     minDate: function () {
-        //         return $('#startDate').val();
-        //     }
-        // });
-
         // Partner Carousel
         $(".partner-content-wrap").owlCarousel({
             loop: true,
@@ -114,52 +95,6 @@ function submitToAPI(e) {
                 }
             }
         }); // Partner Carousel End
-
-
-        // Funfact Count JS
-        // $('.counter').counterUp({
-        //     delay: 10,
-        //     time: 1000
-        // });
-
-
-        // Choose Popular Car Isotope
-        // $(".popucar-menu a, .home2-car-filter a").click(function () {
-
-        //     $(".popucar-menu a, .home2-car-filter a").removeClass('active');
-        //     $(this).addClass('active');
-
-        //     var filterValue = $(this).attr('data-filter');
-        //     $(".popular-car-gird").isotope({
-        //         filter: filterValue
-        //     });
-
-        //     return false;
-        // }); // Choose Popular Car Isotope End
-
-
-        // // Choose Newest Car Isotope
-        // $(".newcar-menu a").click(function () {
-
-        //     $(".newcar-menu a").removeClass('active');
-        //     $(this).addClass('active');
-
-        //     var filterValue = $(this).attr('data-filter');
-        //     $(".newest-car-gird").isotope({
-        //         filter: filterValue
-        //     });
-
-        //     return false;
-        // }); // Choose Newest Car Isotope End
-
-
-        // // Choose Car Maginific Popup
-        // $('.car-hover').magnificPopup({
-        //     type: 'image',
-        //     removalDelay: 300,
-        //     mainClass: 'mfp-fade'
-        // }); // Maginific Popup End
-
 
         // Testimonial Carousel
         $(".testimonial-content").owlCarousel({
