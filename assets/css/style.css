@@ -6,7 +6,7 @@
 }
 
 .overlay:after {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   content: "";
   left: 0;
   position: absolute;
@@ -461,22 +461,17 @@ a.slicknav_btn {
   background-color: #222;
 }
 
-.about-video {
-  position: relative;
-  padding-bottom: 56.25%;
-}
-
-.about-video iframe {
-  border: medium none;
-  border-radius: 3px;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 /*== About Area CSS End ==*/
+
+
+/*== Testimonials Area CSS Start ==*/
+
+.testimonial-content {
+  line-height: 2.3em;
+  /* text-align: center; */
+}
+
+/*== Testimonials Area CSS End ==*/
 
 /*== Partner Area CSS Start ==*/
 
