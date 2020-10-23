@@ -6,7 +6,7 @@
 }
 
 .overlay:after {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   content: "";
   left: 0;
   position: absolute;
@@ -287,7 +287,7 @@ a.slicknav_btn {
 /*== Slider Area CSS Start ==*/
 
 .single-slide-item {
-  background-image: url(assets/img/car_1.jpg);
+  background-image: url(/assets/img/car_1.jpg);
   background-position: center center;
   background-size: cover;
   padding: 80px 0;
@@ -300,7 +300,7 @@ a.slicknav_btn {
 }
 
 .contact-form select.custom-select {
-  background-image: url("assets/img/caret-cion.png");
+  background-image: url(/assets/img/caret-cion.png);
   background-position: right 13px center;
   background-size: 12px auto;
 }
@@ -399,7 +399,11 @@ a.slicknav_btn {
 
 .slider-right-text h1 {
   color: #ffd000;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Trebuchet MS",
+  Tahoma,
+  Geneva,
+  Verdana,
+  sans-serif;
   font-size: 45px;
   margin-bottom: 10px;
   text-align: center;
